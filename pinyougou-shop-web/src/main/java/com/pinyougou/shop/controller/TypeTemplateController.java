@@ -1,9 +1,12 @@
 package com.pinyougou.shop.controller;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.pinyougou.pojo.TbTypeTemplate;
 import com.pinyougou.sellergoods.service.TypeTemplateService;
@@ -99,7 +102,7 @@ public class TypeTemplateController {
 		}
 	}
 	
-		/**
+	/**
 	 * 查询+分页
 	 * @param brand
 	 * @param page
@@ -109,6 +112,11 @@ public class TypeTemplateController {
 	@RequestMapping("/search")
 	public PageResult search(@RequestBody TbTypeTemplate typeTemplate, int page, int rows  ){
 		return typeTemplateService.findPage(typeTemplate, page, rows);		
+	}
+	
+	@RequestMapping("/findSpecList")
+	public List<Map> findSpecList(@RequestParam("id") Long id){
+		return typeTemplateService.findSpecList(id);
 	}
 	
 }
