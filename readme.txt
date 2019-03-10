@@ -88,3 +88,20 @@ service : 运营商管理、商家管理、广告管理
 		而由DispatcherServlet创建的SpringMVC的容器主要用于和该Servlet相关的一些组件，比如Controller、ViewResovler等。
 		子容器(SpringMVC容器)可以访问父容器(Spring容器)的Bean，父容器(Spring容器)不能访问子容器(SpringMVC容器)的Bean。
 	
+6. maven
+	目录：pom、src/main/java、src/main/resource、src/main/webapp、src/test/java、target
+	
+	构建项目的生命周期
+	cleanLifeCycle: clean
+	defaultLifeCycle: complie test package install deploy
+	siteLifeCycle: site
+	命令都是使用对应的插件工作的
+	
+	jar作用范围：
+	范围有三个：编译 测试 运行
+	默认compile：三个范围都有效 
+	provided:运行无效，即打包时沒有将jar包打进去
+	
+	
+	
+	

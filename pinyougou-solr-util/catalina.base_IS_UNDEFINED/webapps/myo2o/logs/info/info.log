@@ -1,0 +1,22 @@
+2019-03-10 13:59:55.846 [main] INFO  o.s.test.context.support.DefaultTestContextBootstrapper -
+				Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-03-10 13:59:55.858 [main] INFO  o.s.test.context.support.DefaultTestContextBootstrapper -
+				Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2019-03-10 13:59:55.864 [main] INFO  o.s.test.context.support.DefaultTestContextBootstrapper -
+				Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4b553d26, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@69a3d1d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@86be70a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@480bdb19, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2a556333]
+2019-03-10 13:59:55.944 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader -
+				Loading XML bean definitions from file [E:\eclipse-workplace\pinyougou-parent\pinyougou-solr-util\target\classes\spring\applicationContext-solr.xml]
+2019-03-10 13:59:56.042 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader -
+				Loading XML bean definitions from file [E:\eclipse-workplace\pinyougou-parent\pinyougou-solr-util\target\classes\spring\applicationContext.xml]
+2019-03-10 13:59:56.108 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader -
+				Loading XML bean definitions from file [E:\eclipse-workplace\pinyougou-parent\pinyougou-dao\target\classes\spring\applicationContext-dao.xml]
+2019-03-10 13:59:56.128 [main] INFO  o.s.context.support.GenericApplicationContext -
+				Refreshing org.springframework.context.support.GenericApplicationContext@66d1af89: startup date [Sun Mar 10 13:59:56 CST 2019]; root of context hierarchy
+2019-03-10 13:59:56.268 [main] INFO  o.s.c.support.PropertySourcesPlaceholderConfigurer -
+				Loading properties file from file [E:\eclipse-workplace\pinyougou-parent\pinyougou-dao\target\classes\properties\db.properties]
+2019-03-10 13:59:57.627 [main] INFO  com.alibaba.druid.pool.DruidDataSource -
+				{dataSource-1} inited
+2019-03-10 13:59:58.018 [Thread-0] INFO  o.s.context.support.GenericApplicationContext -
+				Closing org.springframework.context.support.GenericApplicationContext@66d1af89: startup date [Sun Mar 10 13:59:56 CST 2019]; root of context hierarchy
+2019-03-10 13:59:58.022 [Thread-0] INFO  com.alibaba.druid.pool.DruidDataSource -
+				{dataSource-1} closed
