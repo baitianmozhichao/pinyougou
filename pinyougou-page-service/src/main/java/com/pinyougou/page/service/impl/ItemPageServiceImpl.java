@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfig;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.pinyougou.mapper.TbGoodsDescMapper;
 import com.pinyougou.mapper.TbGoodsMapper;
 import com.pinyougou.page.service.ItemPageService;
@@ -18,6 +19,7 @@ import com.pinyougou.pojo.TbGoodsDesc;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 
+@Service
 public class ItemPageServiceImpl implements ItemPageService {
 
 	@Value("${pagedir}")
@@ -42,7 +44,7 @@ public class ItemPageServiceImpl implements ItemPageService {
 			dataModel.put("goods", goods);
 			TbGoodsDesc goodsDesc = goodsDescMapper.selectByPrimaryKey(goodsId);
 			dataModel.put("goodsDesc", goodsDesc);
-			Writer out = new FileWriter(pagedir + goodsId + ".html");
+			Writer out = new FileWriter("E:\\setup\\items\\" + goodsId + ".html");
 			template.process(dataModel, out);
 			out.close();
 			return true;
