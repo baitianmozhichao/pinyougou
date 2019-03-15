@@ -1,12 +1,13 @@
 package com.pinyougou.pojogroup;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.pinyougou.pojo.TbGoods;
 import com.pinyougou.pojo.TbGoodsDesc;
 import com.pinyougou.pojo.TbItem;
 
-public class Goods {
+public class Goods implements Serializable{
 	private TbGoods tbGoods;
 	private TbGoodsDesc tbGoodsDesc;
 	private List<TbItem> itemList;

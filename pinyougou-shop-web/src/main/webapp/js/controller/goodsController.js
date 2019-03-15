@@ -30,11 +30,14 @@ app.controller('goodsController', function($scope, $controller, goodsService,
 
 	// 保存
 	$scope.save = function() {
+		debugger
 		$scope.entity.goodsDesc.introduction = editor.html();
 		var serviceObject;// 服务层对象
 		if ($scope.entity.id != null) {// 如果有ID
 			serviceObject = goodsService.update($scope.entity); // 修改
 		} else {
+			$scope.entity.tbGoods = $scope.entity.goods
+			$scope.entity.tbGoodsDesc = $scope.entity.goodsDesc
 			serviceObject = goodsService.add($scope.entity);// 增加
 		}
 		serviceObject.success(function(response) {

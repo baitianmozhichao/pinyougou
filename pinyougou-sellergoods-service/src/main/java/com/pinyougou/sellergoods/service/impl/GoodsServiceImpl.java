@@ -78,7 +78,7 @@ public class GoodsServiceImpl implements GoodsService {
 	 */
 	@Override
 	public void add(Goods goods) {
-		goods.getTbGoods().setAuditStatus("0");		
+		goods.getTbGoods().setAuditStatus("0");
 		goodsMapper.insert(goods.getTbGoods());	//插入商品表
 		goods.getTbGoodsDesc().setGoodsId(goods.getTbGoods().getId());
 		goodsDescMapper.insert(goods.getTbGoodsDesc());//插入商品扩展数据
@@ -104,7 +104,7 @@ public class GoodsServiceImpl implements GoodsService {
 			item.setSpec("{}");			
 			setItemValus(goods,item);					
 			itemMapper.insert(item);
-		}	
+		}
 	}
 	
 	private void setItemValus(Goods goods,TbItem item) {
